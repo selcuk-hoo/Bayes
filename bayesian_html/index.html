@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bayes Teoremi Hesaplayıcı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bayes Teoremi Hesaplayıcı</h2>
+        <h3>Bayes Teoremi Nedir?</h3>
+        <p>Bayes Teoremi, kanıtla birlikte bir hipotezin olasılığını günceller.</p>
+        <p><strong>Formül:</strong> P(A|B) = [P(B|A) × P(A)] / P(B)</p>
+        <p><em>A</em>: Hipotez (ör. hasta olmak) &nbsp;&nbsp;
+        <br><em>B</em>: Kanıt (ör. test sonucu pozitif)</p>
+        <hr>
+        <label>
+            <strong>Genel olasılık</strong> (P(A))<br>Kanıt yokken hipotezin gerçekleşme olasılığı:
+            <input type="number" id="olasilik" step="any" placeholder="Örn: 0.005" min="0" max="1">
+        </label>
+        <label>
+            <strong>Kanıtlanabilirlik / Likelihood</strong> (P(B|A))<br>Hipotez doğruysa kanıtın gözlemlenme olasılığı:
+            <input type="number" id="pozitif_iken" step="any" placeholder="Örn: 0.99" min="0" max="1">
+        </label>
+        <label>
+            <strong>Yanlış pozitif oranı</strong> (P(B|¬A))<br>Hipotez yanlışsa kanıtın gözlemlenme olasılığı:
+            <input type="number" id="pozitif_olmama" step="any" placeholder="Örn: 0.02" min="0" max="1">
+        </label>
+        <button onclick="hesapla()">Kanıtla Güncellenmiş Olasılığı Hesapla</button>
+        <div class="sonuc" id="sonuc"></div>
+        <div class="hata" id="hata"></div>
+        <a href="Bayes.pdf" target="_blank">Bayes Teoremi Hakkında Detaylı Bilgi</a>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
