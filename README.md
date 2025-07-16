@@ -15,7 +15,7 @@ Burada:
 
     P(B): Kanıtın her türlü yoldan ortaya çıkma olasılığıdır.
 
-Örnek 1 - Sağlık Testi
+# Örnek 1 - Sağlık Testi
 
 Bir hastalık toplumda %0.5 oranında görülüyor. Bir test %99 doğrulukta:
 
@@ -33,7 +33,7 @@ Sonuç:
 P(A|B) = (0.99 × 0.005) / 0.0149 ≈ 0.33
 Yani test %99 doğru olsa bile, nadir bir hastalık olduğu için pozitif sonuçtan sonra gerçekten hasta olma olasılığı %33 civarında kalır.
 
-Örnek 2 - Mahkeme / DNA Kanıtı
+# Örnek 2 - Mahkeme / DNA Kanıtı
 
 Bir şehirde 1 milyon kişi var. Polis bir DNA örneği buluyor ve şüpheli kişinin DNA’sı ile eşleştiği tespit ediliyor. DNA testi %99 özgün:
 
