@@ -35,14 +35,26 @@ Yani test %99 doğru olsa bile, nadir bir hastalık olduğu için pozitif sonuç
 
 Örnek 2 - Mahkeme / DNA Kanıtı
 
-Bir şehirde 1 milyon kişi var. DNA testi %99 özgün:
+Bir şehirde 1 milyon kişi var. Polis bir DNA örneği buluyor ve şüpheli kişinin DNA’sı ile eşleştiği tespit ediliyor. DNA testi %99 özgün:
 
-    Gerçek suçlu için eşleşme garantili: P(B|A) = 1
+    Gerçek suçlu için DNA eşleşmesi garantidir: P(B|A) = 1
 
     Masum biri için yanlış eşleşme olasılığı: P(B|¬A) = 0.0001
 
-P(A) = 1 / 1.000.000 = 0.000001
-P(B) = (1 × 0.000001) + (0.0001 × 0.999999) ≈ 0.000101
+Önce temel olasılıklar:
 
-P(A|B) = 0.000001 / 0.000101 ≈ %1
-Yani tek başına bir DNA eşleşmesi, suçluluğu %1 olasılıkla doğrular. Ölçümdeki hata payı küçük görünse de, suçlu olma ihtimali baştan çok düşük olduğunda bu hata payı sonucu belirgin şekilde etkiler.
+    P(A) = 1 / 1,000,000 = 0.000001 (şüphelinin baştan suçlu olma olasılığı)
+
+    P(¬A) = 0.999999
+
+DNA eşleşmesi gözlemlenme olasılığı:
+P(B) = P(B|A) × P(A) + P(B|¬A) × P(¬A)
+P(B) = (1 × 0.000001) + (0.0001 × 0.999999)
+P(B) ≈ 0.000001 + 0.0000999999 ≈ 0.000101
+
+Bayes Teoremi ile güncellenmiş olasılık:
+P(A|B) = P(B|A) × P(A) / P(B)
+P(A|B) = 1 × 0.000001 / 0.000101 ≈ 0.0099 ≈ %0.99
+
+Yani DNA eşleşmesi tek başına suçluluğu yaklaşık %0.99 oranında destekler.
+Buradaki ders şudur: Test çok güvenilir görünse bile, olayın başlangıç olasılığı (1 milyonda 1) çok düşük olduğunda, küçük bir yanlış eşleşme ihtimali bile son olasılığı belirgin şekilde düşürür.
