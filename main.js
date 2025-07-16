@@ -20,7 +20,7 @@ window.hesapla = function() {
 
         const sonuc = bayesHesapla(genel_olasilik, pozitif_iken_olasilik, pozitif_iken_olmama_olasiligi);
         document.getElementById('sonuc').textContent =
-            "Pozitif kanıt durumunda olayın gerçekleşmiş olma olasılığı yüzde " + 100*sonuc.toFixed(1s);
+            "Pozitif kanıt durumunda olayın gerçekleşmiş olma olasılığı yüzde " + (100*sonuc).toFixed(1);
     } catch (e) {
         document.getElementById('hata').textContent = "Hatalı giriş veya hesaplama hatası! " + e.message;
     }
